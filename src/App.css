@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+/* Product Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Responsive for Tablets */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+}
+
+/* Responsive for Small Mobile */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+  }
+}
