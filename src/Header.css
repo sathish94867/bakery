@@ -52,16 +52,18 @@
     align-items: center;
     background: #f3f3f3;
     border-radius: 50px;
-    padding: 6px;
+    padding: 6px 12px;
     width: 50%;
     border: 2px solid #ccc;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .search-bar:focus-within {
     border-color: #ff5722;
+    box-shadow: 0px 0px 8px rgba(255, 87, 34, 0.6);
 }
 
+/* Search Input */
 .search-input {
     border: none;
     background: transparent;
@@ -81,15 +83,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 .search-btn:hover {
     background: #e64a19;
+    transform: scale(1.1);
 }
 
 .search-icon {
     color: white;
+    transition: color 0.3s ease-in-out;
 }
 
 /* Icons */
@@ -104,12 +108,35 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
-    transition: color 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.icon-wrapper:hover {
+    background: rgba(143, 65, 17, 0.2);
+    border: 2px solid rgba(143, 65, 17, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.icon-wrapper:active {
+    transform: scale(0.95);
+}
+
+.icon {
+    color: #8F4111;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .icon-wrapper:hover .icon {
-    color: black;
+    color: #D2691E;
+    transform: rotate(15deg);
 }
 
 /* Cart Icon with Badge */
@@ -126,9 +153,10 @@
     font-size: 12px;
     font-weight: bold;
     border-radius: 50%;
-    padding: 3px 3px;
-    min-width: 15px;
+    padding: 3px 5px;
+    min-width: 18px;
     text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* RESPONSIVE DESIGN */
@@ -166,6 +194,6 @@
         gap: 8px;
     }
     .icon {
-        size: 24px;
+        font-size: 24px;
     }
 }
